@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultimate C# Masterclass 2024", "Ultimate C# Masterclass 2024\Ultimate C# Masterclass 2024.csproj", "{F96026C3-824D-43D4-8EC0-201A9DEE11C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment TODO List", "Assignment TODO List\Assignment TODO List.csproj", "{C1B8BE75-ED6C-4C45-876C-6523CB108EA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F96026C3-824D-43D4-8EC0-201A9DEE11C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96026C3-824D-43D4-8EC0-201A9DEE11C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96026C3-824D-43D4-8EC0-201A9DEE11C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96026C3-824D-43D4-8EC0-201A9DEE11C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1B8BE75-ED6C-4C45-876C-6523CB108EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B8BE75-ED6C-4C45-876C-6523CB108EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B8BE75-ED6C-4C45-876C-6523CB108EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B8BE75-ED6C-4C45-876C-6523CB108EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5E26406-C8F1-420C-9E84-5E8DA6E33315}
+	EndGlobalSection
+EndGlobal
