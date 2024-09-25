@@ -68,7 +68,7 @@ void SeeAllTodos()
 {
     if (todos.Count == 0)
     {
-        Console.WriteLine("No TODOs have been added yet");
+        ShowNoTodosMessage();
     }
     else
     {
@@ -83,7 +83,7 @@ void RemoveTodo()
 {
     if (todos.Count == 0)
     {
-        Console.WriteLine("No TODOs have been added yet");
+        ShowNoTodosMessage();
         return;
     }
     bool isIndexValid = false;
@@ -113,4 +113,8 @@ void RemoveTodo()
         }
 
     }
+}
+void ShowNoTodosMessage()
+{
+    Console.WriteLine("No TODOs have been added yet");
 }
