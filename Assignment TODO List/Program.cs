@@ -57,33 +57,15 @@ void SeeAllTodos()
 
 void AddTodo()
 {
-    bool isValidDescription = false;
-    while (!isValidDescription)
+    string description;
+    do
     {
         Console.WriteLine("Enter the TODO description:");
-        var description = Console.ReadLine();
+        description = Console.ReadLine();
+    }
+    while (!IsDescriptionValid(description));
 
-        if (IsDescriptionValid(description))
-        {
-            isValidDescription = true;
-            todos.Add(description);
-        }
-    }
-}
-
-bool IsDescriptionValid(string description)
-{
-    if (description == "")
-    {
-        Console.WriteLine("The description cannot be empty");
-        return false;
-    }
-    if (todos.Contains(description))
-    {
-        Console.WriteLine("The description must be unique");
-        return false;
-    }
-    return true;
+    todos.Add(description);
 }
 
 void RemoveTodo()
@@ -124,4 +106,19 @@ void RemoveTodo()
 void ShowNoTodosMessage()
 {
     Console.WriteLine("No TODOs have been added yet");
+}
+
+bool IsDescriptionValid(string description)
+{
+    if (description == "")
+    {
+        Console.WriteLine("The description cannot be empty");
+        return false;
+    }
+    if (todos.Contains(description))
+    {
+        Console.WriteLine("The description must be unique");
+        return false;
+    }
+    return true;
 }
