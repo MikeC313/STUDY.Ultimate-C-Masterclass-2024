@@ -41,19 +41,24 @@ Console.ReadKey();
 
 void AddTodo()
 {
-    Console.WriteLine("Enter the TODO description:");
-    var description = Console.ReadLine();
+    bool isValidDescription = false;
+    while (!isValidDescription)
+    {
+        Console.WriteLine("Enter the TODO description:");
+        var description = Console.ReadLine();
 
-    if(description == "")
-    {
-        Console.WriteLine("The description cannot be empty");
-    }
-    else if(todos.Contains(description))
-    {
-        Console.WriteLine("The description must be unique");
-    }
-    else
-    {
-        todos.Add(description);
+        if (description == "")
+        {
+            Console.WriteLine("The description cannot be empty");
+        }
+        else if (todos.Contains(description))
+        {
+            Console.WriteLine("The description must be unique");
+        }
+        else
+        {
+            isValidDescription = true;
+            todos.Add(description);
+        }
     }
 }
