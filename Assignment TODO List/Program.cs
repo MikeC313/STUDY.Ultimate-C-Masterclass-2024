@@ -1,5 +1,4 @@
-﻿
-var todos = new List<string>();
+﻿var todos = new List<string>();
 
 Console.WriteLine("Hello!");
 
