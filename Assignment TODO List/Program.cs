@@ -16,6 +16,10 @@ while (!shallExit)
 
     switch (userChoice)
     {
+        case "e":
+        case "E":
+            shallExit = true;
+            break;
         case "s":
         case "S":
             SeeAllTodos();
@@ -28,10 +32,6 @@ while (!shallExit)
         case "R":
             RemoveTodo();
             break;
-        case "e":
-        case "E":
-            shallExit = true;
-            break;
         default:
             Console.WriteLine("Invalid choice");
             break;
@@ -39,6 +39,21 @@ while (!shallExit)
 }
 
 Console.ReadKey();
+
+void SeeAllTodos()
+{
+    if (todos.Count == 0)
+    {
+        ShowNoTodosMessage();
+    }
+    else
+    {
+        for (int i = 0; i < todos.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {todos[i]}");
+        }
+    }
+}
 
 void AddTodo()
 {
@@ -60,21 +75,6 @@ void AddTodo()
         {
             isValidDescription = true;
             todos.Add(description);
-        }
-    }
-}
-
-void SeeAllTodos()
-{
-    if (todos.Count == 0)
-    {
-        ShowNoTodosMessage();
-    }
-    else
-    {
-        for (int i = 0; i < todos.Count; i++)
-        {
-            Console.WriteLine($"{i + 1}. {todos[i]}");
         }
     }
 }
