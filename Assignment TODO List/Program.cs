@@ -26,7 +26,7 @@ while (!shallExit)
             break;
         case "r":
         case "R":
-            Console.WriteLine("Remove a TODO");
+            RemoveTodo();
             break;
         case "e":
         case "E":
@@ -76,5 +76,41 @@ void SeeAllTodos()
         {
             Console.WriteLine($"{i + 1}. {todos[i]}");
         }
+    }
+}
+
+void RemoveTodo()
+{
+    if (todos.Count == 0)
+    {
+        Console.WriteLine("No TODOs have been added yet");
+        return;
+    }
+    bool isIndexValid = false;
+    while (!isIndexValid)
+    {
+        Console.WriteLine("Select the index of the TODO you want to remove:");
+        SeeAllTodos();
+        var userInput = Console.ReadLine();
+        if (userInput == "")
+        {
+            Console.WriteLine("Selected index cannot be empty");
+            continue;
+        }
+        if (int.TryParse(userInput, out int index) &&
+             index >= 1 &&
+             index <= todos.Count)
+        {
+            var indexOfTodo = index - 1;
+            var todoToBeRemoved = todos[indexOfTodo];
+            todos.RemoveAt(indexOfTodo);
+            isIndexValid = true;
+            Console.WriteLine("TODO removed: " + todoToBeRemoved);
+        }
+        else
+        {
+            Console.WriteLine("The given index is not valid");
+        }
+
     }
 }
