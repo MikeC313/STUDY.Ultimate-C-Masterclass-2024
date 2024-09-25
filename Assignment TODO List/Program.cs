@@ -5,6 +5,7 @@ Console.WriteLine("Hello!");
 bool shallExit = false;
 while (!shallExit)
 {
+    Console.WriteLine();
     Console.WriteLine("What do you want to do?");
     Console.WriteLine("[S]ee all todos");
     Console.WriteLine("[A]dd a todo");
@@ -73,7 +74,7 @@ void SeeAllTodos()
     {
         for (int i = 0; i < todos.Count; i++)
         {
-            Console.WriteLine($"{i}. {todos[i]}");
+            Console.WriteLine($"{i + 1}. {todos[i]}");
         }
     }
 }
