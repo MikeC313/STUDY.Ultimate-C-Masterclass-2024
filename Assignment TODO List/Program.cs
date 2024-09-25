@@ -17,7 +17,7 @@ while (!shallExit)
     {
         case "s":
         case "S":
-            Console.WriteLine("See all TODOs");
+            SeeAllTodos();
             break;
         case "a":
         case "A":
@@ -59,6 +59,21 @@ void AddTodo()
         {
             isValidDescription = true;
             todos.Add(description);
+        }
+    }
+}
+
+void SeeAllTodos()
+{
+    if (todos.Count == 0)
+    {
+        Console.WriteLine("No TODOs have been added yet");
+    }
+    else
+    {
+        for (int i = 0; i < todos.Count; i++)
+        {
+            Console.WriteLine($"{i}. {todos[i]}");
         }
     }
 }
