@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Hello!");
+﻿var todos = new List<string>();
+
+Console.WriteLine("Hello!");
 
 bool shallExit = false;
 while (!shallExit)
@@ -19,7 +21,7 @@ while (!shallExit)
             break;
         case "a":
         case "A":
-            Console.WriteLine("Add a TODO");
+            AddTodo();
             break;
         case "r":
         case "R":
@@ -34,4 +36,24 @@ while (!shallExit)
             break;
     }
 }
+
 Console.ReadKey();
+
+void AddTodo()
+{
+    Console.WriteLine("Enter the TODO description:");
+    var description = Console.ReadLine();
+
+    if(description == "")
+    {
+        Console.WriteLine("The description cannot be empty");
+    }
+    else if(todos.Contains(description))
+    {
+        Console.WriteLine("The description must be unique");
+    }
+    else
+    {
+        todos.Add(description);
+    }
+}
